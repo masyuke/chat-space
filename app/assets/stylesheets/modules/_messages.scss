@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  .SideBar {
+    background-color: #253141;
+    width: 300px;
+    &__SideHeader {
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      &__Name {
+        height: 20px;
+        width: 260px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        &__User {
+          @include color;
+          font-weight: bold;
+        }
+        &__Icons {
+          width: 60px;
+          display: flex;
+          justify-content: flex-end;
+          .icon1 {
+            @include color;
+            text-decoration: none;
+          }
+          .icon2 {
+            margin-left: 5px;
+            @include color;
+          }
+        }
+      }
+     
+    }
+    &__GroupList {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      &__SideBox {
+        @include color;
+        &__GroupName {
+          font-size: 15px;
+          padding: 20px 20px 0px 20px;
+        }
+        &__Message {
+          font-size: 11px;
+          margin: 5px 20px 40px 20px;
+        }
+      }
+    }
+  }
+
+  .MainChat {
+    background-color: #ffffff;
+    width: calc(100vw - 300px);
+    height: 100%;
+      &__GroupInfo {
+        background-color: #ffffff;
+        height: 100px;
+        &__TopBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &__HeaderLogo {
+            &__GroupName {
+              color: #333333;
+              font-size: 20px;
+              margin: 35px 0 15px 40px;
+            }
+            &__BottomBox {
+              color: #999999;
+              font-size: 12px;
+              margin-left: 40px;
+            }
+          }
+          &__EditBtn {
+            color: #38aef0;
+            width: 72px;
+            font-size: 16px;
+            margin: 28px 40px;
+            padding: 0 20px;
+            border: 1px solid #38aef0;
+            height:40px;
+            line-height: 40px;
+            a {
+              text-decoration: none;
+              color: #38aef0;
+            }
+          }
+        }
+      }
+      &__MessageList {
+        background-color: #fafafa;
+        height: calc(100vh - 190px);
+        &__MainBox {
+          padding-left: 40px;
+          padding-top: 35px;
+          &__MessageInfo {
+            display: flex;
+            &__UserName {
+              color: #333333;
+              font-size: 16px;
+              font-weight: bold;
+            }
+            &__Date {
+              color: #999999;
+              font-size: 12px;
+              padding-left: 10px;
+            }
+          }
+          &__Message {
+            color: #434A54;
+            font-size: 14px;
+            padding-bottom: 46px;
+            margin-top: 12px;
+          }
+        }
+      }
+      &__MessageForm {
+        background-color: #d2d2d2;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        padding: 20px 50px 20px 40px;
+          &__InputContent {
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            position: relative;
+            .FormInputContent {
+              padding-left: 10px;
+              width: 100%;
+              height: 100%;
+              border: none;
+            }
+            .FormInputImage {
+              display: none;
+            }
+            .InputBox {
+              position: absolute;
+              right: 10px;
+              top: 5px;
+              // text-align: center;
+            }
+            .fa-image {
+              font-size: 25px;
+              // text-align: center;
+            }
+          }
+        &__Btn {
+          height: 100%;
+          .SendBtn {
+            background-color: #38aef0;
+            @include color;
+            // color: #fff;
+            font-size: 16px;
+            padding: 0 30px;
+            margin-left: 15px;
+            border: none;
+            height: 100%;
+          }
+        }
+      }
+  }
+}
+
