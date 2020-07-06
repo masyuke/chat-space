@@ -4,19 +4,16 @@
       .SideBar__SideHeader__Name__User
         = current_user.name
       .SideBar__SideHeader__Name__Icons
-        = link_to "#", class: "icon1" do
+        = link_to new_group_path, class: "icon1" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user) , class: "icon2" do
           = icon('fas', 'cog')
   
   .SideBar__GroupList
-    .SideBar__GroupList__SideBox
-      .SideBar__GroupList__SideBox__GroupName
-        techcamp
-      .SideBar__GroupList__SideBox__Message
-        まだメッセージがありません
-    .SideBar__GroupList__SideBox
-      .SideBar__GroupList__SideBox__GroupName
-        techcamp
-      .SideBar__GroupList__SideBox__Message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .SideBar__GroupList__SideBox
+        = link_to '#', class: "sidebox-link" do
+          .SideBar__GroupList__SideBox__GroupName
+            = group.name
+          .SideBar__GroupList__SideBox__Message
+            まだメッセージがありません

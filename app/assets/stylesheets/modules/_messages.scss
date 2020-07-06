@@ -43,6 +43,10 @@
       height: calc(100vh - 100px);
       &__SideBox {
         @include color;
+        .sidebox-link {
+          @include color;
+          text-decoration: none;
+        }
         &__GroupName {
           font-size: 15px;
           padding: 20px 20px 0px 20px;
