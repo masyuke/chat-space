@@ -39,21 +39,22 @@
      
     }
     &__GroupList {
+      overflow: scroll;
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       &__SideBox {
-        @include color;
-        .sidebox-link {
-          @include color;
-          text-decoration: none;
-        }
         &__GroupName {
+          @include color;
           font-size: 15px;
           padding: 20px 20px 0px 20px;
         }
         &__Message {
+          @include color;
           font-size: 11px;
           margin: 5px 20px 40px 20px;
+        }
+        a {
+          text-decoration: none;
         }
       }
     }
@@ -99,6 +100,7 @@
         }
       }
       &__MessageList {
+        overflow: scroll;
         background-color: #fafafa;
         height: calc(100vh - 190px);
         &__MainBox {
@@ -128,7 +130,6 @@
       &__MessageForm {
         background-color: #d2d2d2;
         height: 90px;
-        display: flex;
         align-items: center;
         padding: 20px 50px 20px 40px;
           &__InputContent {
@@ -136,7 +137,8 @@
             line-height: 50px;
             width: 100%;
             position: relative;
-            .FormInputContent {
+            display: flex;
+            &__FormInputContent {
               padding-left: 10px;
               width: 100%;
               height: 100%;
@@ -147,29 +149,24 @@
             }
             .InputBox {
               position: absolute;
-              right: 10px;
+              right: 130px;
               top: 5px;
-              // text-align: center;
             }
             .fa-image {
               font-size: 25px;
-              // text-align: center;
+              cursor: pointer;
             }
           }
-        &__Btn {
-          height: 100%;
-          .SendBtn {
+          .Form__submit {
             background-color: #38aef0;
             @include color;
-            // color: #fff;
             font-size: 16px;
             padding: 0 30px;
             margin-left: 15px;
             border: none;
             height: 100%;
+            cursor: pointer;
           }
-        }
       }
   }
 }
-
